@@ -60,7 +60,7 @@ function Add({
                             htmlFor="fileUpload"
                             className={styles.uploadBtn}
                           >
-                            Image <FaUpload />
+                            Upload image <FaUpload />
                           </label>
                           <input
                             onChange={(e) => onFileChange(e)}
