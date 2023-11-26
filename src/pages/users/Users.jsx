@@ -7,12 +7,12 @@ import useUserStore from "../../usersStore";
 import styles from "./users.module.scss";
 
 const columns = [
-  { field: "id", headerName: "ID", width: 60, flex: 0.5 },
+  { field: "id", headerName: "ID", minWidth: 90, flex: 0.5 },
   {
     field: "img",
     headerName: "Avatar",
     inputType: "image",
-    width: 60,
+    minWidth: 100,
     flex: 1,
     renderCell: (params) => {
       return <img className={styles.avatar} src={params.row.img || noAvatar} />;
@@ -22,7 +22,7 @@ const columns = [
     field: "firstName",
     headerName: "First name",
     inputType: "text",
-    minWidth: 100,
+    minWidth: 130,
     flex: 1,
   },
   {
@@ -30,7 +30,7 @@ const columns = [
     headerName: "Last name",
     inputType: "text",
     flex: 1,
-    minWidth: 120,
+    minWidth: 130,
   },
   {
     field: "email",
@@ -59,7 +59,7 @@ const columns = [
     inputType: "checkbox",
     type: "boolean",
     flex: 1,
-    minWidth: 60,
+    minWidth: 120,
   },
 ];
 

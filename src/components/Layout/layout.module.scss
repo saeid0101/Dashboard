@@ -52,7 +52,7 @@
 }
 .menuBtn {
   position: fixed;
-  top: 9%;
+  top: 64px;
   right: 0;
   width: 24px;
   height: 24px;
@@ -60,7 +60,4 @@
   color: rgb(255, 255, 255);
   font-size: 24px;
   z-index: 9999;
-
-  @include md {
-  }
 }
