@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.container {
+  background-color: white;
+  width: 100%;
+  padding: 22px;
+  @include md {
+    font-size: 14px;
+  }
+  .heading {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    .leftSection {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        @include md {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .name {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .email {
+        font-size: 12px;
+        @include md {
+          display: none;
+        }
+      }
+    }
+  }
+}

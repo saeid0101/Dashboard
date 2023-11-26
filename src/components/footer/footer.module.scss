@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    color: $main-color;
+    span:first-child{
+        font-weight: 700;   
+    }
+    span:last-child{
+        font-size: 14px;
+    }
+}

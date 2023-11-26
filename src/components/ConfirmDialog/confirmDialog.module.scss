@@ -1,0 +1,59 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.488);
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    position: relative;
+    width: 400px;
+    background-color: $second-bg;
+    padding: 40px;
+    border-radius: 1px;
+    @include md {
+      width: 300px;
+    }
+
+    .text {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .btn {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    button {
+      padding: 3px 18px;
+      font-size: 14px;
+      border-radius: 0;
+      outline: none;
+      border: none;
+      color: white;
+    }
+    .confirm {
+      background-color: rgba(255, 0, 0, 0.435);
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.665);
+        cursor: pointer;
+      }
+    }
+    .cancel {
+      background-color: rgb(113, 119, 117);
+      &:hover {
+        background-color: rgb(142, 151, 145);
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.488);
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    position: relative;
+    max-width: 600px;
+    background-color: $second-bg;
+    padding: 50px;
+    border-radius: 1px;
+
+    @include md {
+      padding: 20px 30px;
+    }
+
+    .heading {
+      font-size: 14px;
+      margin-bottom: 40px;
+      color: $soft-color;
+
+      .close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        font-size: 22px;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+
+      .body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10%;
+
+        @include md {
+          // flex-direction: column;
+          width: 100%;
+          gap: 5px;
+        }
+
+        .item {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding-bottom: 10px;
+          @include md {
+            width: 49%;
+
+            gap: 1px;
+          }
+          .checkbox {
+            .checkboxTitle {
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+            .checkboxGroup {
+              display: flex;
+              gap: 10px;
+              padding: 10px;
+              padding-left: 0;
+              background-color: transparent;
+              @include md {
+                padding: 0;
+              }
+              .checkBoxLabel {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .file {
+            .fileTitle {
+              font-size: 14px;
+              margin-bottom: 10px;
+              @include md {
+                display: none;
+              }
+            }
+            .fileGroup {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              gap: 5px;
+              width: 100%;
+              .imageFile {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+              .uploadBtn {
+                padding: 10px 15px;
+                font-size: 14px;
+                border: 1px solid white;
+                width: 100%;
+                text-align: center;
+
+                &:hover {
+                  background-color: azure;
+                }
+              }
+            }
+            .fileInput {
+              display: none;
+            }
+          }
+
+          .label {
+            font-size: 14px;
+            @include md {
+              display: none;
+            }
+          }
+          .input {
+            padding: 10px;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid white;
+            outline: none;
+            margin-bottom: 20px;
+            color: $main-color;
+            @include md {
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+
+      .btn {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        background-color: #439e37;
+        color: white;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #4eb840;
+        }
+      }
+    }
+  }
+}

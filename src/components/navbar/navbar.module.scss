@@ -1,0 +1,75 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
+
+.navbar {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  span {
+    font-size: 14px;
+  }
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  .iconsCollapsible {
+    @include lg {
+      display: none;
+    }
+  }
+
+  .notification {
+    display: flex;
+    position: relative;
+    font-size: 24px;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -5px;
+      right: -7px;
+      background-color: red;
+      color: white;
+      border-radius: 100%;
+      width: 16px;
+      height: 16px;
+      font-size: 12px;
+    }
+  }
+  .user {
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    img {
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+    }
+    span {
+      font-size: 16px;
+      @include lg {
+        display: none;
+      }
+    }
+  }
+}

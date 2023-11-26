@@ -1,0 +1,11 @@
+@import '../../styles/responsive.scss';
+
+.chart {
+  width: 100%;
+  padding: 10px;
+  @include sm {
+    padding: 5px;
+  }
+
+
+}

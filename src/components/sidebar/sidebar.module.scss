@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.sidebar {
+  background-color: $second-bg;
+  color: white;
+  width: 100%;
+  padding-top: 30px;
+  .item {
+    margin-bottom: 20px;
+    color: $main-color;
+    .title {
+      margin-bottom: 10px;
+      display: block;
+      color: $soft-color;
+      font-size: 14px;
+      font-weight: 200;
+      text-transform: uppercase;
+      @include lg {
+        display: none;
+      }
+    }
+  }
+  .listItem {
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+      @include lg {
+        display: none;
+        width: max-content;
+      }
+    }
+    &:hover {
+      background: $soft-bg;
+    }
+  }
+}

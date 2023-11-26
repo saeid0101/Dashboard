@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.crm {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  overflow: auto;
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include grid {
+    grid-template-columns: 1fr;
+  }
+  .areaChart {
+    grid-column: 1/3;
+    @include grid {
+      grid-column: 1;
+    }
+  }
+}
